@@ -1,0 +1,74 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --header-bg: #4CAF50;
+  --footer-bg: #4CAF50;
+  --sidebar-bg: #f4f4f4;
+  --link-color: #0000ee;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #ffffff;
+  --header-bg: #333;
+  --footer-bg: #333;
+  --sidebar-bg: #2a2a2a;
+  --link-color: #66aaff;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60px 1fr 40px;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--header-bg);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: var(--sidebar-bg);
+  padding: 1rem;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside li a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--footer-bg);
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+}

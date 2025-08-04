@@ -1,0 +1,18 @@
+# Admin Dashboard
+
+This is a responsive admin dashboard that I created using **HTML**, **CSS Grid**, and **JavaScript**.
+
+## Features Implemented
+
+- **Clean layout using CSS Grid**:
+  - **Header** with the dashboard title and a theme toggle button.
+  - **Sidebar** with navigation links: Home, Users, Settings.
+  - **Main content area** for reports or data (currently with placeholder text).
+  - **Footer** at the bottom for copyright.
+
+- **Theme Switching**:
+  - Light and dark mode support.
+  - The theme changes background and text colors.
+  - Works instantly without reloading the page.
+
+This project helped me practice grid-based layouts and dynamic styling using JavaScript.
