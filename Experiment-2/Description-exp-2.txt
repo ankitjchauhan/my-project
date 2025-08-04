@@ -1,0 +1,17 @@
+In this project, we created a simple Banking Interface using HTML and CSS. The main structure is built using HTML, where we added a heading, a display box to show the amount (currently set to $0), and two buttons labeled Deposit and Withdraw. These elements are wrapped inside a container to keep everything organized and grouped together.
+
+To style the interface, we used CSS. The .container class is designed to center the content and give it a clean look with padding, borders, and rounded corners. We used Flexbox with a column direction so that the elements stack vertically. The .box class is used for the amount display, where we changed the text color to green, increased the font size, and centered the text. For the buttons, we created two separate classes: .button for the green Deposit button and .button2 for the red Withdraw button. Both buttons have white text, some padding for better size, rounded corners, and a cursor pointer to make them look like interactive buttons.
+Learning Outcomes:
+1.Learned how to structure a basic web page using HTML elements like headings, divs, and buttons.
+2.Gained experience in styling elements with CSS, including colors, borders, padding, and text alignment.
+3.Understood how to use Flexbox to arrange elements vertically and create a clean, organized layout.
+
+
+
+
+
+
+
+
+
+
