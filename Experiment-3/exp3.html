@@ -1,33 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="exp3.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="exp3.css" id="theme-stylesheet">
 </head>
 <body>
-  <div class="dashboard">
-    <header>
-      <h1>Admin Dashboard</h1>
-      <button id="theme-toggle">🌙 Dark Mode</button>
-    </header>
-    <aside>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Users</a></li>
-        <li><a href="#">Settings</a></li>
-      </ul>
-    </aside>
-    <main>
-      <h2>Welcome, Admin!</h2>
-      <p>This is the main content area. Add charts, tables, or reports here.</p>
-    </main>
-    <footer>
-      <p>&copy; 2025 Admin Panel</p>
-    </footer>
-  </div>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Admin Dashboard</h1>
+            <div class="theme-switch">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="theme-label">Dark Mode</span>
+            </div>
+        </header>
 
-  <script src="exp3.js"></script>
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Settings</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2>Welcome, Admin!</h2>
+            <p>This is the main content area. Add charts, tables, or reports here.</p>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Admin Panel</p>
+        </footer>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeStylesheet = document.getElementById('theme-stylesheet');
+        const themeLabel = document.querySelector('.theme-label');
+
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                themeStylesheet.href = 'exp3a.css';
+                themeLabel.textContent = 'Dark Mode';
+            } else {
+                themeStylesheet.href = 'exp3.css';
+                themeLabel.textContent = 'Dark Mode';
+            }
+        });
+    </script>
 </body>
 </html>

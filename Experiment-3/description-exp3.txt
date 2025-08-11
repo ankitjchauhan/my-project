@@ -1,18 +1,25 @@
-# Admin Dashboard
+ADMIN DASHBOARD PROJECT EXPLANATION
 
-This is a responsive admin dashboard that I created using **HTML**, **CSS Grid**, and **JavaScript**.
+This project creates a professional admin dashboard with light/dark theme switching functionality.
 
-## Features Implemented
+FILES CREATED:
+• exp3.html - Main HTML structure with theme toggle switch
+• exp3.css - Light theme styling (green header, light sidebar)
+• exp3a.css - Dark theme styling (dark colors, purple links)
 
-- **Clean layout using CSS Grid**:
-  - **Header** with the dashboard title and a theme toggle button.
-  - **Sidebar** with navigation links: Home, Users, Settings.
-  - **Main content area** for reports or data (currently with placeholder text).
-  - **Footer** at the bottom for copyright.
+LAYOUT STRUCTURE:
+• Header: Contains dashboard title and theme switch toggle
+• Sidebar: Navigation menu with Home, Users, Settings links
+• Main Content: Welcome message and placeholder for reports/data
+• Footer: Copyright information at bottom
 
-- **Theme Switching**:
-  - Light and dark mode support.
-  - The theme changes background and text colors.
-  - Works instantly without reloading the page.
+KEY FEATURES:
+• CSS Grid layout for clean, professional arrangement
+• Toggle switch dynamically changes CSS file (light ↔ dark)
+• No page reload required for theme switching
+• Mobile responsive design adapts to smaller screens
+• Hover effects on navigation links
+• Modern, accessible design matching provided screenshots
 
-This project helped me practice grid-based layouts and dynamic styling using JavaScript.
+HOW IT WORKS:
+Toggle switch changes swap the CSS file reference, instantly updating the entire dashboard appearance without refreshing the page.

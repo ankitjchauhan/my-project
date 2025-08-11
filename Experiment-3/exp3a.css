@@ -1,4 +1,4 @@
-/* Light Theme CSS - exp3.css */
+/* Dark Theme CSS - exp3a.css */
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #1a1a1a;
+    color: #ffffff;
 }
 
 .dashboard-container {
@@ -25,13 +25,13 @@ body {
 /* Header Styles */
 .header {
     grid-area: header;
-    background-color: #4CAF50;
+    background-color: #2d2d2d;
     color: white;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .header h1 {
@@ -47,7 +47,7 @@ body {
 
 .theme-label {
     font-size: 0.9rem;
-    color: white;
+    color: #2196F3;
 }
 
 /* Toggle Switch Styles */
@@ -99,9 +99,9 @@ input:checked + .slider:before {
 /* Sidebar Styles */
 .sidebar {
     grid-area: sidebar;
-    background-color: #e8e8e8;
+    background-color: #333333;
     padding: 2rem 0;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid #444;
 }
 
 .nav-list {
@@ -116,44 +116,45 @@ input:checked + .slider:before {
     display: block;
     padding: 0.75rem 2rem;
     text-decoration: none;
-    color: #666;
+    color: #9966CC;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-link:hover {
-    background-color: #ddd;
-    color: #333;
+    background-color: #444;
+    color: #BB88EE;
 }
 
 /* Main Content Styles */
 .main-content {
     grid-area: main;
-    background-color: white;
+    background-color: #2d2d2d;
     padding: 2rem;
     margin: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .main-content h2 {
-    color: #333;
+    color: #ffffff;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 
 .main-content p {
-    color: #666;
+    color: #cccccc;
     line-height: 1.6;
 }
 
 /* Footer Styles */
 .footer {
     grid-area: footer;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #2d2d2d;
+    color: #cccccc;
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
+    border-top: 1px solid #444;
 }
 
 /* Responsive Design */
