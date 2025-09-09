@@ -1,0 +1,42 @@
+.container{
+    display :flex;
+    flex-direction: column;
+    justify-content: center;
+    width : 50%;
+    margin: 5px;
+    padding : 40px;
+    border:2px solid black;
+    border-radius:10px;
+
+}
+.button{
+    background-color: green; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:10px;
+}
+.button2{
+    background-color: red; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:10px;
+}
+.box{
+     color : green;
+        font-size: 20px;
+        text-align: center;
+}
