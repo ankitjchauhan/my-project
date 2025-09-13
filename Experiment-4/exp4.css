@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: #f8f9fa;
+}
+
+h1 {
+  color: #333;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #007bff;
+}
+
+.counter {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.counter span {
+  font-weight: bold;
+  color: #007bff;
+}

@@ -1,0 +1,25 @@
+ADMIN DASHBOARD PROJECT EXPLANATION
+
+This project creates a professional admin dashboard with light/dark theme switching functionality.
+
+FILES CREATED:
+• exp3.html - Main HTML structure with theme toggle switch
+• exp3.css - Light theme styling (green header, light sidebar)
+• exp3a.css - Dark theme styling (dark colors, purple links)
+
+LAYOUT STRUCTURE:
+• Header: Contains dashboard title and theme switch toggle
+• Sidebar: Navigation menu with Home, Users, Settings links
+• Main Content: Welcome message and placeholder for reports/data
+• Footer: Copyright information at bottom
+
+KEY FEATURES:
+• CSS Grid layout for clean, professional arrangement
+• Toggle switch dynamically changes CSS file (light ↔ dark)
+• No page reload required for theme switching
+• Mobile responsive design adapts to smaller screens
+• Hover effects on navigation links
+• Modern, accessible design matching provided screenshots
+
+HOW IT WORKS:
+Toggle switch changes swap the CSS file reference, instantly updating the entire dashboard appearance without refreshing the page.

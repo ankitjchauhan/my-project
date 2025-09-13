@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive SVG Drawing Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        #drawingCanvas {
+            border: 2px solid #333;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>SVG Drawing Tool</h1>
+    <svg id="drawingCanvas" width="800" height="600"></svg>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const drawingCanvas = document.getElementById('drawingCanvas');
+            let isDrawing = false;
+            let currentLine = null;
+            let startX, startY;
+
+            const createLine = (x1, y1) => {
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('x1', x1);
+                line.setAttribute('y1', y1);
+                line.setAttribute('x2', x1);
+                line.setAttribute('y2', y1);
+                line.setAttribute('stroke', 'blue');
+                line.setAttribute('stroke-width', '2');
+                return line;
+            };
+
+            drawingCanvas.addEventListener('mousedown', (e) => {
+                isDrawing = true;
+                const rect = drawingCanvas.getBoundingClientRect();
+                startX = e.clientX - rect.left;
+                startY = e.clientY - rect.top;
+
+                currentLine = createLine(startX, startY);
+                drawingCanvas.appendChild(currentLine);
+            });
+
+            drawingCanvas.addEventListener('mousemove', (e) => {
+                if (!isDrawing) return;
+
+                const rect = drawingCanvas.getBoundingClientRect();
+                const currentX = e.clientX - rect.left;
+                const currentY = e.clientY - rect.top;
+
+                if (currentLine) {
+                    currentLine.setAttribute('x2', currentX);
+                    currentLine.setAttribute('y2', currentY);
+                }
+            });
+
+            drawingCanvas.addEventListener('mouseup', () => {
+                isDrawing = false;
+                currentLine = null;
+            });
+
+            drawingCanvas.addEventListener('mouseleave', () => {
+                isDrawing = false;
+                currentLine = null;
+            });
+        });
+    </script>
+</body>
+</html>
