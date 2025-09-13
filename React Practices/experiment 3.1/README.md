@@ -7,11 +7,8 @@ To create a reusable React component that displays product details dynamically. 
 
 Objectives : 
 Develop a single, reusable ProductCard component.
-
 Utilize props to pass different product data (name, price, stock status) to the component.
-
 Render multiple instances of the same ProductCard component, each displaying unique data.
-
 Style the components to create a clean, card-based layout.
 
 
@@ -20,6 +17,7 @@ This simple React application consists of two main parts: a parent component (Ap
 
 
 Procedure/Steps : 
+
 Create the ProductCard Component: In App.jsx, define a function component named ProductCard that accepts a props object as its argument.
 
 Destructure Props: Inside the ProductCard component, destructure the name, price, and status properties from the props object for easier access.
@@ -40,7 +38,6 @@ The result is a clean and organized product list with three distinct cards, each
 
 Learning Outcomes : 
 Understanding Props: Gained a practical understanding of how props are used to pass data from a parent component to a child component in React.
-
 Component Reusability: Learned to create a single, reusable component that can be used multiple times with different data, significantly reducing code duplication.
 
 Dynamic Rendering: Discovered how React can render dynamic data, making the UI interactive and data-driven.
