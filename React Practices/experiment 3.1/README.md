@@ -31,13 +31,20 @@ Render Multiple Cards: In the main App component, render three instances of the 
 Pass Data via Props: For each ProductCard instance, pass the unique product data as attributes (e.g., <ProductCard name="Wireless Mouse" price="25.99" status="In Stock" />). React automatically collects these attributes into the props object received by the component.
 
 
+
+
 Results : 
 The result is a clean and organized product list with three distinct cards, each displaying different data. The component structure is efficient and scalable; if we wanted to add a fourth product, we would simply add another ProductCard component with its own props, without changing the component's core logic.
 
 
 
+
+
 Learning Outcomes : 
+
+
 Understanding Props: Gained a practical understanding of how props are used to pass data from a parent component to a child component in React.
+
 Component Reusability: Learned to create a single, reusable component that can be used multiple times with different data, significantly reducing code duplication.
 
 Dynamic Rendering: Discovered how React can render dynamic data, making the UI interactive and data-driven.
