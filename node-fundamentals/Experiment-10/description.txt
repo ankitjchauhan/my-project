@@ -1,0 +1,85 @@
+EMPLOYEE MANAGEMENT SYSTEM – PROJECT DOCUMENTATION
+TECHNOLOGIES USED
+
+. Node.js – For building the command-line interface (CLI) application and handling asynchronous input/output operations.
+
+. JavaScript (ES6) – For implementing employee management logic, including array manipulation and functions.
+
+. Readline Module – Node.js core module for capturing user input from the terminal interactively.
+
+PROJECT OVERVIEW
+
+This project is an EMPLOYEE MANAGEMENT SYSTEM CLI that allows users to manage employees through   a terminal interface.
+
+It demonstrates:
+
+. EMPLOYEE CRUD OPERATIONS – Adding, listing, and removing employees.
+
+. ARRAY MANAGEMENT – Storing employee data in memory and updating dynamically.
+
+. ASYNCHRONOUS USER INTERACTIONS – Using Node.js readline to handle input without blocking the program.
+
+. MENU-DRIVEN INTERFACE – Provides a clean, sequential menu for user interaction.
+
+The UI is simple and interactive with:
+
+. Clear menu options for each action.
+
+. Prompt messages guiding the user through operations.
+
+. Real-time feedback after each action (employee added/removed/listed).
+
+PROJECT STRUCTURE
+1. Node.js (STRUCTURE & FUNCTIONALITY)
+
+. Handles the logic and user interaction:
+
+. readline Interface – readline.createInterface() is used for input/output in the terminal.
+
+. Menu System – showMenu() displays options and routes user choices to appropriate functions.
+
+Functions for Operations:
+
+. addEmployee() – Prompts for employee name and ID, then adds them to the array.
+
+. listEmployees() – Lists all employees in a formatted order.
+
+. removeEmployee() – Removes employee by ID using findIndex() and splice().
+
+. exit – Closes the readline interface and terminates the program.
+
+2. JavaScript (LOGIC & DATA HANDLING)
+
+. Employee Array – Stores objects {id, name} in memory.
+
+. Array Methods – push() for adding, forEach() for listing, findIndex() and splice() for removing   employees.
+
+. Switch Statement – Routes user input to different functionalities cleanly.
+
+. Callback Functions – Handles asynchronous prompts sequentially.
+
+LEARNING OUTCOMES
+
+. By building this project, I learned:
+
+. How to use Node.js to build interactive CLI applications.
+
+. How to manage data using arrays and array methods.
+
+. How to handle asynchronous input/output using the readline module.
+
+. How to implement a menu-driven interface in a CLI environment.
+
+. How to give clear user feedback and maintain a clean code structure.
+
+KEY NODE.JS & JAVASCRIPT CONCEPTS USED
+
+. Asynchronous I/O – Using readline for non-blocking input.
+
+. Array Management – Storing and manipulating employee data in memory.
+
+. Function Encapsulation – Separating add, list, and remove logic into functions.
+
+. Menu-Driven Flow Control – Using switch and callbacks for sequential operations.
+
+. Object Handling – Employee objects {id, name} for structured data.
