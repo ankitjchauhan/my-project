@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>API Output Screenshots</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    h1 { margin-bottom: 1rem; }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>API Responses</h1>
+  <h2>1. Create Users Response</h2>
+  <pre>{
+  "message": "Users created",
+  "users": [
+    {
+      "_id": "bc55b39e-3613-4d78-a709-b94c829b7f9f",
+      "name": "Alice",
+      "balance": 1000
+    },
+    {
+      "_id": "5bce5968-54dc-431a-8f45-15bead5e7e59",
+      "name": "Bob",
+      "balance": 500
+    }
+  ]
+}</pre>
+
+  <h2>2. Successful Transfer ($150) Response</h2>
+  <pre>{
+  "message": "Transferred $150 from Alice to Bob.",
+  "senderBalance": 850,
+  "receiverBalance": 650
+}</pre>
+
+  <h2>3. Failed Transfer ($900) Response</h2>
+  <pre>{
+  "message": "Insufficient balance"
+}</pre>
+</body>
+</html>

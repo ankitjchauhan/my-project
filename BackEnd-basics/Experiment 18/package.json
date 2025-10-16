@@ -1,0 +1,21 @@
+{
+  "name": "experiment-18",
+  "version": "1.0.0",
+  "description": "Account transfer system with balance validation using Node.js and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongoose",
+    "mongodb",
+    "api",
+    "transfer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment‑18 API Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    pre { background: #f0f0f0; padding: 10px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Experiment‑18 API Test</h1>
+  <p>This page automatically calls the API endpoints and displays the responses. Open your browser console to see additional details.</p>
+  <h2>Create Users</h2>
+  <pre id="createOutput">Loading...</pre>
+  <h2>Successful Transfer ($150)</h2>
+  <pre id="transferSuccessOutput">Waiting...</pre>
+  <h2>Failed Transfer ($900)</h2>
+  <pre id="transferFailOutput">Waiting...</pre>
+
+  <script>
+    async function callApi() {
+      const createOut = document.getElementById('createOutput');
+      const successOut = document.getElementById('transferSuccessOutput');
+      const failOut = document.getElementById('transferFailOutput');
+      try {
+        // Create two users: Alice with $1000 and Bob with $500
+        const createResp = await fetch('http://localhost:3000/create-users', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ users: [ { name: 'Alice', balance: 1000 }, { name: 'Bob', balance: 500 } ] }),
+        });
+        const createData = await createResp.json();
+        createOut.textContent = JSON.stringify(createData, null, 2);
+
+        // Extract IDs for transfer
+        const [alice, bob] = createData.users;
+        // Successful transfer: $150 from Alice to Bob
+        const successResp = await fetch('http://localhost:3000/transfer', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ fromUserId: alice._id, toUserId: bob._id, amount: 150 }),
+        });
+        const successData = await successResp.json();
+        successOut.textContent = JSON.stringify(successData, null, 2);
+
+        // Failed transfer: $900 from Alice to Bob (Alice now has 850)
+        const failResp = await fetch('http://localhost:3000/transfer', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ fromUserId: alice._id, toUserId: bob._id, amount: 900 }),
+        });
+        const failData = await failResp.json();
+        failOut.textContent = JSON.stringify(failData, null, 2);
+      } catch (err) {
+        console.error('API test failed', err);
+        createOut.textContent = 'Error: ' + err.message;
+      }
+    }
+    callApi();
+  </script>
+</body>
+</html>

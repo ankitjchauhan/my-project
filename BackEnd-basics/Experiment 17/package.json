@@ -1,0 +1,28 @@
+{
+  "name": "experiment-17-jwt-banking-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JWT Authentication for Secure Banking API Endpoints (Express.js)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npx nodemon server.js"
+  },
+  "keywords": [
+    "express",
+    "jwt",
+    "banking",
+    "api",
+    "byteXL",
+    "experiment-17"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
