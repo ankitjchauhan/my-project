@@ -1,0 +1,20 @@
+{
+  "name": "ci-cd-demo",
+  "version": "1.0.0",
+  "description": "A demo Node.js project to set up CI/CD pipeline using GitHub Actions",
+  "main": "index.js",
+ "scripts": {
+  "test": "echo \"No tests specified\" && exit 0",
+  "build": "npm run build"
+}
+
+  "keywords": [
+    "ci-cd",
+    "github-actions",
+    "nodejs"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
